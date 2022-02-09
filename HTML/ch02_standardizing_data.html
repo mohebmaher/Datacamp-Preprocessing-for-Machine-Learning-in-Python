@@ -14000,19 +14000,24 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Standardizing Data
-It's possible that you'll come across datasets with lots of numerical noise built in, such as lots of variance or differently-scaled data. The preprocessing solution for that is standardization.</p>
+<li><p>Standardizing Data</p>
+<blockquote><p>It's possible that you'll come across datasets with lots of numerical noise built in, such as lots of variance or differently-scaled data. The preprocessing solution for that is standardization.</p>
+</blockquote>
 </li>
-<li><p>What is standardization?
-Standardization is a preprocessing method used to transform continuous data to make it look normally distributed. In scikit-learn, this is often a necessary step, because many models assume that the data you are training on is normally distributed, and if it isn't, you risk biasing your model. You can standardize your data in different ways, but in this course we're going to talk about two methods: log normalization and scaling. It's also important to note that standardization is a preprocessing method applied to continuous, numerical data. You'll learn methods for dealing with categorical data later in the course.</p>
+<li><p>What is standardization?</p>
+<blockquote><p>Standardization is a preprocessing method used to transform continuous data to make it look normally distributed. In scikit-learn, this is often a necessary step, because many models assume that the data you are training on is normally distributed, and if it isn't, you risk biasing your model. You can standardize your data in different ways, but in this course we're going to talk about two methods: log normalization and scaling. It's also important to note that standardization is a preprocessing method applied to continuous, numerical data. You'll learn methods for dealing with categorical data later in the course.</p>
+</blockquote>
 </li>
-<li><p>When to standardize: models
-There are a few different scenarios in which you want to standardize your data. First, if you're working with any kind of model that uses a linear distance metric or operates in a linear space like k-nearest neighbors, linear regression, or k-means clustering, the model is assuming that the data and features you're giving it are related in a linear fashion, or can be measured with a linear distance metric. There are a number of models that deal with nonlinear spaces, but for those models that are in a linear space, the data must also be in that space. The case when a feature or features in your dataset have high variance is related to this. This could bias a model that assumes the data is normally distributed. If a feature in your dataset has a variance that's an order of magnitude or more greater than the other features, this could impact the model's ability to learn from other features in the dataset. Modeling a dataset that contains continuous features that are on different scales is another scenario to watch out for. For example, consider a dataset that contains a column related to height and another related to weight. In order to compare these features, they must be in the same linear space, and therefore must be standardized in some way. All of these scenarios assume you're working with a model that makes some kind of linearity assumptions, however. There are a number of models that are perfectly fine operating in a nonlinear space or do a certain amount of standardization upon input, but that's outside the scope of this course.</p>
-</li>
-<li><p>Let's practice!
-Now that you've learned when to standardize your data, let's test your knowledge.</p>
+<li><p>When to standardize: models</p>
+<blockquote><p>There are a few different scenarios in which you want to standardize your data. First, if you're working with any kind of model that uses a linear distance metric or operates in a linear space like k-nearest neighbors, linear regression, or k-means clustering, the model is assuming that the data and features you're giving it are related in a linear fashion, or can be measured with a linear distance metric. There are a number of models that deal with nonlinear spaces, but for those models that are in a linear space, the data must also be in that space. The case when a feature or features in your dataset have high variance is related to this. This could bias a model that assumes the data is normally distributed. If a feature in your dataset has a variance that's an order of magnitude or more greater than the other features, this could impact the model's ability to learn from other features in the dataset. Modeling a dataset that contains continuous features that are on different scales is another scenario to watch out for. For example, consider a dataset that contains a column related to height and another related to weight. In order to compare these features, they must be in the same linear space, and therefore must be standardized in some way. All of these scenarios assume you're working with a model that makes some kind of linearity assumptions, however. There are a number of models that are perfectly fine operating in a nonlinear space or do a certain amount of standardization upon input, but that's outside the scope of this course.</p>
+</blockquote>
 </li>
 </ol>
+<blockquote><ol>
+<li>Let's practice!
+Now that you've learned when to standardize your data, let's test your knowledge.</li>
+</ol>
+</blockquote>
 
 </div>
 </div>
@@ -14450,7 +14455,7 @@ Now that you've learned when to standardize your data, let's test your knowledge
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.6666666666666666
+<pre>0.8
 </pre>
 </div>
 </div>
@@ -14468,17 +14473,21 @@ Now that you've learned when to standardize your data, let's test your knowledge
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Log normalization
-The first method we'll cover for standardization is log normalization.</p>
+<li><p>Log normalization</p>
+<blockquote><p>The first method we'll cover for standardization is log normalization.</p>
+</blockquote>
 </li>
-<li><p>What is log normalization?
-Log normalization is a method for standardizing your data that can be useful when you have a particular column with high variance. As you saw in the previous section's exercise, training a k-nearest neighbors classifier on that subset of the wine dataset didn't get a very high accuracy score. This is because within that subset, the Proline colummn has extremely high variance, which is affecting the accuracy of the classifier. Log normalization applies a log transformation to your values, which transforms your values onto a scale that approximates normality, an assumption about your data that a lot of models make. The method of log normalization we're going to work with in Python takes the natural log of each number in the left hand column, which is simply the exponent you would raise above the mathematical constant e (approximately equal to 2.718) to get that number. So, looking at the table on the slide, the log of 30 is 3.4, because e to the power of 3.4 equals 30. Log normalization is a good strategy when you care about relative changes in a linear model, when you still want to capture the magnitude of change, and when you want to keep everything in the positive space. It's a nice way to minimize the variance of a column and make it comparable to other columns for modeling.</p>
+<li><p>What is log normalization?</p>
+<blockquote><p>Log normalization is a method for standardizing your data that can be useful when you have a particular column with high variance. As you saw in the previous section's exercise, training a k-nearest neighbors classifier on that subset of the wine dataset didn't get a very high accuracy score. This is because within that subset, the Proline colummn has extremely high variance, which is affecting the accuracy of the classifier. Log normalization applies a log transformation to your values, which transforms your values onto a scale that approximates normality, an assumption about your data that a lot of models make. The method of log normalization we're going to work with in Python takes the natural log of each number in the left hand column, which is simply the exponent you would raise above the mathematical constant e (approximately equal to 2.718) to get that number. So, looking at the table on the slide, the log of 30 is 3.4, because e to the power of 3.4 equals 30. Log normalization is a good strategy when you care about relative changes in a linear model, when you still want to capture the magnitude of change, and when you want to keep everything in the positive space. It's a nice way to minimize the variance of a column and make it comparable to other columns for modeling.</p>
+</blockquote>
 </li>
-<li><p>Log normalization in Python
-Applying log normalization to data in Python is fairly straightforward. We can use the log function from Numpy to do the trick. Here we have a dataframe of some values. If we check the variance of the columns, you can see that column 2 has a significantly higher variance than column 1. To apply log normalization to column 2, we need the log function from numpy. we can pass the column we want to log normalize directly into the function. If we take a look at both column 2 and the log-normalized column-2, you can see that the transformation has scaled down the values. If we check the variance of both column 1 and the log-normalized column 2, you can see that the variances are much closer together now.</p>
+<li><p>Log normalization in Python</p>
+<blockquote><p>Applying log normalization to data in Python is fairly straightforward. We can use the log function from Numpy to do the trick. Here we have a dataframe of some values. If we check the variance of the columns, you can see that column 2 has a significantly higher variance than column 1. To apply log normalization to column 2, we need the log function from numpy. we can pass the column we want to log normalize directly into the function. If we take a look at both column 2 and the log-normalized column-2, you can see that the transformation has scaled down the values. If we check the variance of both column 1 and the log-normalized column 2, you can see that the variances are much closer together now.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-Now it's your turn! Let's take a look at the wine dataset again and do some normalization.</p>
+<li><p>Let's practice!</p>
+<blockquote><p>Now it's your turn! Let's take a look at the wine dataset again and do some normalization.</p>
+</blockquote>
 </li>
 </ol>
 
@@ -14701,20 +14710,25 @@ dtype: float64</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Scaling data
-Let's move on to talking about scaling our data.</p>
+<li><p>Scaling data</p>
+<blockquote><p>Let's move on to talking about scaling our data.</p>
+</blockquote>
 </li>
-<li><p>What is feature scaling?
-Scaling is a method of standardization that's most useful when you're working with a dataset that contains continuous features that are on different scales, and you're using a model that operates in some sort of linear space (like linear regression or k-nearest neighbors). Feature scaling transforms the features in your dataset so they have a mean of zero and a variance of one. This will make it easier to linearly compare features. This is a requirement for many models in scikit-learn.</p>
+<li><p>What is feature scaling?</p>
+<blockquote><p>Scaling is a method of standardization that's most useful when you're working with a dataset that contains continuous features that are on different scales, and you're using a model that operates in some sort of linear space (like linear regression or k-nearest neighbors). Feature scaling transforms the features in your dataset so they have a mean of zero and a variance of one. This will make it easier to linearly compare features. This is a requirement for many models in scikit-learn.</p>
+</blockquote>
 </li>
-<li><p>How to scale data
-Let's take a look at another dataframe. In each column, we have numbers that are relatively close within the column, but not across columns. If we look at the variance, it's relatively low across columns. To better model this data, scaling would be a good choice here.</p>
+<li><p>How to scale data</p>
+<blockquote><p>Let's take a look at another dataframe. In each column, we have numbers that are relatively close within the column, but not across columns. If we look at the variance, it's relatively low across columns. To better model this data, scaling would be a good choice here.</p>
+</blockquote>
 </li>
-<li><p>How to scale data
-Scikit-learn has a variety of scaling methods, but we're only going to focus on the standard scaler method, imported from preprocessing. This method works by removing the mean and scaling each feature to have unit variance. There's a simpler scale function in scikit-learn, but the benefit of using the Standard Scaler object is that you can apply the same transformation on other data, like a test set, or new data that's part of the same set, for example, without having to rescale everything. So once we have the standard scaler method, we can apply the fit transform function on the dataframe. We can reconvert the output of fit transform, which is a numpy array, to a dataframe to look at it more easily. If we take a look at the newly scaled dataframe, we can see that the values have been scaled down, and if we calculate the variance by column, it's not only close to 1, but it's now the same for all of our features.</p>
+<li><p>How to scale data</p>
+<blockquote><p>Scikit-learn has a variety of scaling methods, but we're only going to focus on the standard scaler method, imported from preprocessing. This method works by removing the mean and scaling each feature to have unit variance. There's a simpler scale function in scikit-learn, but the benefit of using the Standard Scaler object is that you can apply the same transformation on other data, like a test set, or new data that's part of the same set, for example, without having to rescale everything. So once we have the standard scaler method, we can apply the fit transform function on the dataframe. We can reconvert the output of fit transform, which is a numpy array, to a dataframe to look at it more easily. If we take a look at the newly scaled dataframe, we can see that the values have been scaled down, and if we calculate the variance by column, it's not only close to 1, but it's now the same for all of our features.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-Now it's your turn to try scaling data in Python and scikit-learn.</p>
+<li><p>Let's practice!</p>
+<blockquote><p>Now it's your turn to try scaling data in Python and scikit-learn.</p>
+</blockquote>
 </li>
 </ol>
 
@@ -14995,14 +15009,17 @@ dtype: float64</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Standardized data and modeling
-Now that we've learned a couple of different methods for standardization, it's time to put this into practice with modeling. As mentioned before, many models in scikit-learn require your data to be scaled appropriately across columns, otherwise you risk biasing your results. The last part of this section will be dedicated to modeling data on both unscaled and scaled data, so you can see the difference in model performance. The model we're going to use is k-nearest neighbors.</p>
+<li><p>Standardized data and modeling</p>
+<blockquote><p>Now that we've learned a couple of different methods for standardization, it's time to put this into practice with modeling. As mentioned before, many models in scikit-learn require your data to be scaled appropriately across columns, otherwise you risk biasing your results. The last part of this section will be dedicated to modeling data on both unscaled and scaled data, so you can see the difference in model performance. The model we're going to use is k-nearest neighbors.</p>
+</blockquote>
 </li>
-<li><p>K-nearest neighbors
-You should already be a little familiar with both k-nearest neighbors, as well as the scikit-learn workflow, based on previous courses, but we'll do a quick review of both. K-nearest neighbors is a model that classifies data based on its distance to training set data. A new data point is assigned a label based on the class that the majority of surrounding data points belong to. The workflow for training a model in scikit-learn is pretty simple. You will want to do all of your preprocessing first, of course. Before you train your model, it's very important that you split up your data into training and test sets, to avoid overfitting. That's easily done with scikit-learn's train test split function, shown here. Once you've done that, it's just a matter of fitting the model to your training set, and then running your unseen test set through the model. Most models have a score function, which can be used to evaluate your model's performance.</p>
+<li><p>K-nearest neighbors</p>
+<blockquote><p>You should already be a little familiar with both k-nearest neighbors, as well as the scikit-learn workflow, based on previous courses, but we'll do a quick review of both. K-nearest neighbors is a model that classifies data based on its distance to training set data. A new data point is assigned a label based on the class that the majority of surrounding data points belong to. The workflow for training a model in scikit-learn is pretty simple. You will want to do all of your preprocessing first, of course. Before you train your model, it's very important that you split up your data into training and test sets, to avoid overfitting. That's easily done with scikit-learn's train test split function, shown here. Once you've done that, it's just a matter of fitting the model to your training set, and then running your unseen test set through the model. Most models have a score function, which can be used to evaluate your model's performance.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-All of that should look familiar to you. If not, check out some of the other courses related to Python and machine learning. Otherwise, it's your turn!</p>
+<li><p>Let's practice!</p>
+<blockquote><p>All of that should look familiar to you. If not, check out some of the other courses related to Python and machine learning. Otherwise, it's your turn!</p>
+</blockquote>
 </li>
 </ol>
 
@@ -15387,7 +15404,7 @@ All of that should look familiar to you. If not, check out some of the other cou
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.7111111111111111
+<pre>0.6888888888888889
 </pre>
 </div>
 </div>
@@ -15549,7 +15566,7 @@ All of that should look familiar to you. If not, check out some of the other cou
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.9777777777777777
+<pre>0.9555555555555556
 </pre>
 </div>
 </div>

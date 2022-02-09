@@ -13998,38 +13998,49 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Preprocessing Data for Machine Learning
-Hello! Welcome to this course on Preprocessing Data for Machine Learning. My name is Sarah Guido, and I'll be helping you learn the skills necessary for preparing data for modeling. Let's jump right in.</p>
+<li><p>Preprocessing Data for Machine Learning</p>
+<blockquote><p>Hello! Welcome to this course on Preprocessing Data for Machine Learning. My name is Sarah Guido, and I'll be helping you learn the skills necessary for preparing data for modeling. Let's jump right in.</p>
+</blockquote>
 </li>
-<li><p>What is data preprocessing?
-Data preprocessing comes after you've cleaned up your data and after you've done some exploratory analysis to understand your dataset. Once you understand your dataset, you'll probably have some idea about how you want to model your data. Machine learning models in Python require numerical input, so if your dataset has categorical variables, you'll need to transform them. Think of data preprocessing as a prerequisite for modeling.</p>
+<li><p>What is data preprocessing?</p>
+<blockquote><p>Data preprocessing comes after you've cleaned up your data and after you've done some exploratory analysis to understand your dataset. Once you understand your dataset, you'll probably have some idea about how you want to model your data. Machine learning models in Python require numerical input, so if your dataset has categorical variables, you'll need to transform them. Think of data preprocessing as a prerequisite for modeling.</p>
+</blockquote>
 </li>
-<li><p>Refresher on Pandas basics
-I'm going to walk through some basics in Pandas. Most of this should be review. If it isn't, go check out other courses related to Pandas. We're going to be working with some pretty straightforward files in this course. The important line here is the <code>hiking.head()</code> line. The first thing you're going to want to do with any dataset is look at it.</p>
+<li><p>Refresher on Pandas basics</p>
+<blockquote><p>I'm going to walk through some basics in Pandas. Most of this should be review. If it isn't, go check out other courses related to Pandas. We're going to be working with some pretty straightforward files in this course. The important line here is the <code>hiking.head()</code> line. The first thing you're going to want to do with any dataset is look at it.</p>
+</blockquote>
 </li>
-<li><p>Refresher on Pandas basics
-It's useful to be able to generate a list of the features present in your dataset. You can easily see the columns in a dataset with the columns attribute, and you can see their data type with the dtype attribute.</p>
+<li><p>Refresher on Pandas basics</p>
+<blockquote><p>It's useful to be able to generate a list of the features present in your dataset. You can easily see the columns in a dataset with the columns attribute, and you can see their data type with the dtype attribute.</p>
+</blockquote>
 </li>
-<li><p>Refresher on Pandas basics
-Finally, you can quickly generate some basic stats about a dataframe like the mean, standard deviation, and quartiles using the describe method. One of the first steps you can take to preprocess your data is to remove missing data. There's a lot of ways to deal with missing data, but here we're only going to cover ways to remove either columns or rows with missing data.</p>
+<li><p>Refresher on Pandas basics</p>
+<blockquote><p>Finally, you can quickly generate some basic stats about a dataframe like the mean, standard deviation, and quartiles using the describe method. One of the first steps you can take to preprocess your data is to remove missing data. There's a lot of ways to deal with missing data, but here we're only going to cover ways to remove either columns or rows with missing data.</p>
+</blockquote>
 </li>
-<li><p>Removing missing data
-If you wanted to drop all rows from a dataframe that contain missing values, you can do that with dropna.</p>
+<li><p>Removing missing data</p>
+<blockquote><p>If you wanted to drop all rows from a dataframe that contain missing values, you can do that with dropna.</p>
+</blockquote>
 </li>
-<li><p>Removing missing data
-You can drop specific rows by passing index labels to the drop function, which defaults to dropping rows.</p>
+<li><p>Removing missing data</p>
+<blockquote><p>You can drop specific rows by passing index labels to the drop function, which defaults to dropping rows.</p>
+</blockquote>
 </li>
-<li><p>Removing missing data
-Usually you'll want to focus on dropping a particular column, especially if all or most of its values are missing. You can use the drop method as well, though the parameters are different. The first parameter is the column name, in this case A. We have to specify axis=1 in order to designate that we want to drop a column.</p>
+<li><p>Removing missing data</p>
+<blockquote><p>Usually you'll want to focus on dropping a particular column, especially if all or most of its values are missing. You can use the drop method as well, though the parameters are different. The first parameter is the column name, in this case A. We have to specify axis=1 in order to designate that we want to drop a column.</p>
+</blockquote>
 </li>
-<li><p>Removing missing data
-What if we want to drop rows where data is missing in a particular column? We can do this with the help of boolean indexing, which is a way to filter a dataframe based on certain values. Instead of indexing a dataframe using column or row names, you can set a condition to filter your dataframe by to return a specific set of data. For example, if we wanted only rows in this dataframe where column B is equal to 7, we can filter it by selecting where column B is equal to 7.</p>
+<li><p>Removing missing data</p>
+<blockquote><p>What if we want to drop rows where data is missing in a particular column? We can do this with the help of boolean indexing, which is a way to filter a dataframe based on certain values. Instead of indexing a dataframe using column or row names, you can set a condition to filter your dataframe by to return a specific set of data. For example, if we wanted only rows in this dataframe where column B is equal to 7, we can filter it by selecting where column B is equal to 7.</p>
+</blockquote>
 </li>
-<li><p>Removing missing data
-First, let's take a look at how many null values we have in column B, using isnull to get null values and then using sum to output a count. So we have 2 missing values. To filter those out, we can simply use the notnull method on column B as a boolean index. This will return a dataframe where all rows have a non null value for column B.</p>
+<li><p>Removing missing data</p>
+<blockquote><p>First, let's take a look at how many null values we have in column B, using isnull to get null values and then using sum to output a count. So we have 2 missing values. To filter those out, we can simply use the notnull method on column B as a boolean index. This will return a dataframe where all rows have a non null value for column B.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-Now it's your turn to get rid of missing data. Give it a try!</p>
+<li><p>Let's practice!</p>
+<blockquote><p>Now it's your turn to get rid of missing data. Give it a try!</p>
+</blockquote>
 </li>
 </ol>
 
@@ -14562,20 +14573,25 @@ Now it's your turn to get rid of missing data. Give it a try!</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Working With Data Types
-Now that we've reviewed some Pandas basics, we need to start thinking about other steps we have to take in order to prepare data for modeling. One of these steps is to think about the types that are present in your dataset, because you'll likely have to transform some of these columns to other types later on. Let's take a deeper look at types as well as how to convert column types in your dataset.</p>
+<li><p>Working With Data Types</p>
+<blockquote><p>Now that we've reviewed some Pandas basics, we need to start thinking about other steps we have to take in order to prepare data for modeling. One of these steps is to think about the types that are present in your dataset, because you'll likely have to transform some of these columns to other types later on. Let's take a deeper look at types as well as how to convert column types in your dataset.</p>
+</blockquote>
 </li>
-<li><p>Why are types important?
-Recall that you can check the types of a dataframe by using the dtypes attribute, like this. Pandas datatypes are similar to native python types, but there are a couple of things to be aware of. The most common types you'll be working with are object, int64, and float64 types. The object type is what Pandas uses to refer to a column that consists of string values or is of mixed types. int64 is equivalent to the Python integer type. the 64 simply refers to the allocation of memory alloted for storing the values. and float64 is equivalent to the float type. Another type you might see as you work with data in pandas is the datetime64 type (or the timedelta type). This is because you can store dates as datetime types in pandas dataframes, and even use datetimes as a special kind of index. All you need to be familiar with as we work through this course are the object, int64, and float64 types, though. Before any preprocessing can begin, you have to understand what types you're dealing with in your dataset. Sometimes, you'll start working with a dataset that has an incorrect column type: maybe a numerical column was written out into a csv as a string, and when you try to work with that column, numerical operations won't work.</p>
+<li><p>Why are types important?</p>
+<blockquote><p>Recall that you can check the types of a dataframe by using the dtypes attribute, like this. Pandas datatypes are similar to native python types, but there are a couple of things to be aware of. The most common types you'll be working with are object, int64, and float64 types. The object type is what Pandas uses to refer to a column that consists of string values or is of mixed types. int64 is equivalent to the Python integer type. the 64 simply refers to the allocation of memory alloted for storing the values. and float64 is equivalent to the float type. Another type you might see as you work with data in pandas is the datetime64 type (or the timedelta type). This is because you can store dates as datetime types in pandas dataframes, and even use datetimes as a special kind of index. All you need to be familiar with as we work through this course are the object, int64, and float64 types, though. Before any preprocessing can begin, you have to understand what types you're dealing with in your dataset. Sometimes, you'll start working with a dataset that has an incorrect column type: maybe a numerical column was written out into a csv as a string, and when you try to work with that column, numerical operations won't work.</p>
+</blockquote>
 </li>
-<li><p>Converting column types
-Let's take a look at how to adjust the type of a column if the type that pandas has inferred upon reading in the file is incorrect. Here we have a simple dataset with a couple of columns. if you run df.dtypes, you'll see that the type for column C is object. However, if we simply look at this dataframe, you can see that these are float values: numbers with decimal points. If we want to preprocess and model this data, we're going to have to adjust the column type.</p>
+<li><p>Converting column types</p>
+<blockquote><p>Let's take a look at how to adjust the type of a column if the type that pandas has inferred upon reading in the file is incorrect. Here we have a simple dataset with a couple of columns. if you run df.dtypes, you'll see that the type for column C is object. However, if we simply look at this dataframe, you can see that these are float values: numbers with decimal points. If we want to preprocess and model this data, we're going to have to adjust the column type.</p>
+</blockquote>
 </li>
-<li><p>Converting column types
-Changing the type of a column is very straightforward. Pandas already has a method for converting the type of the column to a new type. You can change the type using the astype method and passing in the type you want to convert it to. Make sure you're only assigning it to the column you want converted. It's also good to be as sure as you can that the column type you want to convert to is representative of the whole column. Remember that the object type can represent a column that includes both string and numeric types.</p>
+<li><p>Converting column types</p>
+<blockquote><p>Changing the type of a column is very straightforward. Pandas already has a method for converting the type of the column to a new type. You can change the type using the astype method and passing in the type you want to convert it to. Make sure you're only assigning it to the column you want converted. It's also good to be as sure as you can that the column type you want to convert to is representative of the whole column. Remember that the object type can represent a column that includes both string and numeric types.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-Now it's your turn to do some type conversion.</p>
+<li><p>Let's practice!</p>
+<blockquote><p>Now it's your turn to do some type conversion.</p>
+</blockquote>
 </li>
 </ol>
 
@@ -14843,23 +14859,29 @@ dtype: object</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ol>
-<li><p>Training and Test Sets
-One of the most necessary steps for preprocessing, which you should be familiar with if you've taken other courses on Python and machine learning, is splitting up your data into training and test sets. We do this to avoid the issue of overfitting. If we train a model on our entire set of data, we won't have any way to test and validate our model because the model will essentially know the dataset by heart. Holding out a test set allows us to preserve some data the model hasn't seen yet.</p>
+<li><p>Training and Test Sets</p>
+<blockquote><p>One of the most necessary steps for preprocessing, which you should be familiar with if you've taken other courses on Python and machine learning, is splitting up your data into training and test sets. We do this to avoid the issue of overfitting. If we train a model on our entire set of data, we won't have any way to test and validate our model because the model will essentially know the dataset by heart. Holding out a test set allows us to preserve some data the model hasn't seen yet.</p>
+</blockquote>
 </li>
-<li><p>Splitting up your dataset
-Just to review, this is how you split up your dataset in scikit learn using the train_test_split function. This should look familiar to you. The function shuffles up your dataset and then randomly splits it. By default, the function will split 75% of the data into the training set and 25% into the test set. In many scenarios, the default splitting parameters will work well. However, if your labels have an uneven distribution, your test and training sets might not be representative samples of your dataset and could bias the model you're trying to train. For example, if you look at the example training and test datasets on this slide, you can see that the training set has only samples labeled n, while there is a y label in the test set.</p>
+<li><p>Splitting up your dataset</p>
+<blockquote><p>Just to review, this is how you split up your dataset in scikit learn using the train_test_split function. This should look familiar to you. The function shuffles up your dataset and then randomly splits it. By default, the function will split 75% of the data into the training set and 25% into the test set. In many scenarios, the default splitting parameters will work well. However, if your labels have an uneven distribution, your test and training sets might not be representative samples of your dataset and could bias the model you're trying to train. For example, if you look at the example training and test datasets on this slide, you can see that the training set has only samples labeled n, while there is a y label in the test set.</p>
+</blockquote>
 </li>
-<li><p>Stratified sampling
-A good technique for sampling more accurately when you have imbalanced classes is stratified sampling, which is a way of sampling that takes into account the distribution of classes or features in your dataset. So for example, let's say we had a dataset with 100 samples, 80 of which are class 1 and 20 of which are class 2. We want the class distribution in both our training set and our test set to reflect this, so in both our training and test sets, we'd want 80% of our sample to be class 1 and 20% to be class 2, which means we'd want 60 class 1 samples and 15 class 2 samples in our training set of 75 samples. In our test set of 25 samples, we want to have 20 class 1 samples and 5 of class 2. This is on par with the distribution of classes in the original dataset.</p>
+<li><p>Stratified sampling</p>
+<blockquote><p>A good technique for sampling more accurately when you have imbalanced classes is stratified sampling, which is a way of sampling that takes into account the distribution of classes or features in your dataset. So for example, let's say we had a dataset with 100 samples, 80 of which are class 1 and 20 of which are class 2. We want the class distribution in both our training set and our test set to reflect this, so in both our training and test sets, we'd want 80% of our sample to be class 1 and 20% to be class 2, which means we'd want 60 class 1 samples and 15 class 2 samples in our training set of 75 samples. In our test set of 25 samples, we want to have 20 class 1 samples and 5 of class 2. This is on par with the distribution of classes in the original dataset.</p>
+</blockquote>
 </li>
-<li><p>Stratified sampling
-There's a really easy way to do this in scikit learn using the train test split function. The function comes with a stratify parameter, and to stratify according to class labels, just pass in your y dataset to that parameter. So here we have our 100 labels, 80 are class1 and 20 are class 2. let's run train_test_split, and pass the y labels dataset into that stratify parameter.</p>
+<li><p>Stratified sampling</p>
+<blockquote><p>There's a really easy way to do this in scikit learn using the train test split function. The function comes with a stratify parameter, and to stratify according to class labels, just pass in your y dataset to that parameter. So here we have our 100 labels, 80 are class1 and 20 are class 2. let's run train_test_split, and pass the y labels dataset into that stratify parameter.</p>
+</blockquote>
 </li>
-<li><p>Stratified sampling
-If we check the distribution of classes for our training and test labels, you can see the distribution of classes is in accordance with the original y class distribution.</p>
+<li><p>Stratified sampling</p>
+<blockquote><p>If we check the distribution of classes for our training and test labels, you can see the distribution of classes is in accordance with the original y class distribution.</p>
+</blockquote>
 </li>
-<li><p>Let's practice!
-Now it's your turn to do some stratified sampling!</p>
+<li><p>Let's practice!</p>
+<blockquote><p>Now it's your turn to do some stratified sampling!</p>
+</blockquote>
 </li>
 </ol>
 
